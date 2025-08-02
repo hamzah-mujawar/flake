@@ -39,6 +39,7 @@
     libgcc
     gcc
     wl-screenrec
+    fd
   ];
   
   fonts.fontconfig.enable = true;
