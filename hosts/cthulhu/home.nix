@@ -40,6 +40,7 @@
     gcc
     wl-screenrec
     fd
+    neovim
   ];
   
   fonts.fontconfig.enable = true;
