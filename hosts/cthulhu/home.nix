@@ -41,6 +41,7 @@
     wl-screenrec
     fd
     tcpdump
+    dig
   ];
   
   fonts.fontconfig.enable = true;
