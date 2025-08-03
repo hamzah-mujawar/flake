@@ -40,8 +40,7 @@
     gcc
     wl-screenrec
     fd
-    tcpdump
-    dig
+    dogdns
   ];
   
   fonts.fontconfig.enable = true;
