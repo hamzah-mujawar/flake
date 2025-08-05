@@ -4,10 +4,11 @@
             lib.mkEnableOption "enables hyprland";
     };
     config = lib.mkIf config.hyprland.enable {
-      wayland.windowManager.hyprland = {
+      hyprland = {
 	enable = true;
 	package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 	portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
       };
     };
 }
+ 
