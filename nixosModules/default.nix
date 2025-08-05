@@ -2,13 +2,13 @@
   imports = [
     ./services/x11.nix
     ./services/pipewire.nix
-    ./services/dwm.nix
+    ./programs/hyprland.nix
   ];
   
   x11.enable =
     lib.mkDefault true;
   pipewire.enable =
     lib.mkDefault true;
-  dwm.enable =
+  hyprland.enable =
     lib.mkDefault true;
 }
