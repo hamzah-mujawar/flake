@@ -41,7 +41,7 @@
     wl-screenrec
     fd
     dogdns
-    dwm
+    dmenu
   ];
   
   fonts.fontconfig.enable = true;
