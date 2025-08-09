@@ -42,6 +42,7 @@
     fd
     dogdns
     dmenu
+    neovim
   ];
   
   fonts.fontconfig.enable = true;
