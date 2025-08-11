@@ -43,7 +43,7 @@
     dogdns
     dmenu
     neovim
-    screenkey
+    wshowkeys
   ];
   
   fonts.fontconfig.enable = true;
