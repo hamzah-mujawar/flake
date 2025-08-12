@@ -42,7 +42,6 @@
     fd
     dogdns
     neovim
-    steam
     bottom
   ];
   

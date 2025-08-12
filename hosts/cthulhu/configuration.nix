@@ -56,6 +56,12 @@
     clinfo
   ];
 
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+  };
+  
   # Make laptop lid lock only
   services.logind.lidSwitch = "lock";
   services.logind.lidSwitchExternalPower = "lock";
