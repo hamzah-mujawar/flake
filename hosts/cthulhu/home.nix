@@ -43,6 +43,7 @@
     dogdns
     neovim
     steam
+    bottom
   ];
   
   fonts.fontconfig.enable = true;
@@ -135,3 +136,6 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 } 
+
+
+# I'm kinda ill today so i'm taking today slow, gonna chill with some zachtronics or smth like that
