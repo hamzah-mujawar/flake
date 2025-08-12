@@ -3,7 +3,7 @@
 {
   nix.settings.experimental-features = ["nix-command" "flakes"];
   boot.kernelParams = [ "psmouse.synaptics_intertouch=0" ];
-  
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
