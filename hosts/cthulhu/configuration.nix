@@ -53,12 +53,15 @@
     usbutils
     pciutils
     fastfetch
+    wshowkeys
   ];
+  security.wrappers.wshowkeys.source = "${pkgs.wshowkeys}/bin/wshowkeys";
 
   # Make laptop lid lock only
   services.logind.lidSwitch = "lock";
   services.logind.lidSwitchExternalPower = "lock";
   services.logind.lidSwitchDocked = "ignore";
+
   
   # Make emacs the default text EDITOR
   environment.variables = {

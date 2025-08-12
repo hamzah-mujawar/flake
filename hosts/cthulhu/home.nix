@@ -41,9 +41,7 @@
     wl-screenrec
     fd
     dogdns
-    dmenu
     neovim
-    wshowkeys
   ];
   
   fonts.fontconfig.enable = true;
