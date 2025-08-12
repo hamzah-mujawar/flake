@@ -42,6 +42,7 @@
     fd
     dogdns
     neovim
+    steam
   ];
   
   fonts.fontconfig.enable = true;

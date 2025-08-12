@@ -53,7 +53,6 @@
     usbutils
     pciutils
     fastfetch
-    wshowkeys
   ];
 
   # Make laptop lid lock only
