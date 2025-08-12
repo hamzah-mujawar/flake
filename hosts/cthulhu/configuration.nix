@@ -55,7 +55,6 @@
     fastfetch
     wshowkeys
   ];
-  security.wrappers.wshowkeys.source = "${pkgs.wshowkeys}/bin/wshowkeys";
 
   # Make laptop lid lock only
   services.logind.lidSwitch = "lock";
