@@ -53,6 +53,7 @@
     usbutils
     pciutils
     fastfetch
+    clinfo
   ];
 
   # Make laptop lid lock only
