@@ -81,6 +81,16 @@
 	"col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
 	"col.inactive_border" = "rgba(${base00}ff)";
       };
+
+      "$mod" = "SUPER";
+
+      bindm = [
+	# mouse movements
+      	"$mod, mouse:272, movewindow"
+	"$mod, mouse:273, resizewindow"
+	"$mod ALT, mouse:272, resize window"
+	"$mod, Q, exec, kitty" # kitty my beloved
+      ];
     };
   };
 
