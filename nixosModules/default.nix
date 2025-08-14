@@ -2,7 +2,6 @@
   imports = [
     ./services/x11.nix
     ./services/pipewire.nix
-    ./services/gnome.nix
     ./programs/hyprland.nix
     ./hardware/intelGraphics.nix
   ];
