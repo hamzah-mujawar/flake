@@ -13,7 +13,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { nixpkgs, home-manager, hyprland,  ... } @ inputs:
+  outputs = { nixpkgs, home-manager, hyprland, ... } @ inputs:
     {
       nixosConfigurations = {
         cthulhu = nixpkgs.lib.nixosSystem {
