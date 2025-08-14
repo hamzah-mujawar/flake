@@ -80,8 +80,6 @@
 
       "monitor" = "eDP-1, 1920x1080@60, 0x0, 1";
 
-      exec-once = ''${startupScript}/bin/start'';
-      
       general = with config.colorScheme.palette; {
 	"col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
 	"col.inactive_border" = "rgba(${base00}ff)";
