@@ -91,8 +91,9 @@
 	"sensitivity" = 0;
 	touchpad = {
 		"natural_scroll" = false;
-	}
-      }
+	};
+      };
+
       bindm = [
 	# mouse movements
       	"$mod, mouse:272, movewindow"
