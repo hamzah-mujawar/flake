@@ -53,7 +53,6 @@
     usbutils
     pciutils
     fastfetch
-    walker
     clinfo
   ];
 
