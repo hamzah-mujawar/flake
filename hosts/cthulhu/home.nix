@@ -101,6 +101,8 @@
       	"$mod, mouse:272, movewindow"
 	"$mod, mouse:273, resizewindow"
 	"$mod ALT, mouse:272, resize window"
+      ];
+      bind = [
 	"$mod, Q, exec, $terminal" # kitty my beloved
 	"$mod, M, exit"
 	"$mod, C, killactive"
