@@ -94,6 +94,10 @@
 	};
       };
 
+      gestures = {
+	"workspace_swipe" = true;
+      };
+
       bindm = [
 	# mouse movements
       	"$mod, mouse:272, movewindow"
