@@ -1,4 +1,9 @@
 { inputs, config, pkgs, ... }:
+let
+  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
+    ${pkgs.hyprpanel}/bin/hyprpanel
+    '';
+in
 {
   # Imports
   imports = [
@@ -63,6 +68,47 @@
       epkgs.treesit-grammars.with-all-grammars
     ];
   };
+
+  programs.hyprpanel = {
+    # Configure and theme almost all options from the GUI.
+    # See 'https://hyprpanel.com/configuration/settings.html'.
+    # Default: <same as gui>
+    settings = {
+
+      # Configure bar layouts for monitors.
+      # See 'https://hyprpanel.com/configuration/panel.html'.
+      # Default: null
+      layout = {
+        bar.layouts = {
+          "0" = {
+            left = [ "dashboard" "workspaces" ];
+            middle = [ "media" ];
+            right = [ "volume" "systray" "notifications" ];
+          };
+        };
+      };
+
+      bar.launcher.autoDetectIcon = true;
+      bar.workspaces.show_icons = true;
+
+      menus.clock = {
+        time = {
+          military = true;
+          hideSeconds = true;
+        };
+        weather.unit = "metric";
+      };
+
+      menus.dashboard.directories.enabled = false;
+
+      theme.bar.transparent = true;
+
+      theme.font = {
+        name = "CaskaydiaCove NF";
+        size = "16px";
+      };
+    };
+  };
   
   programs.git = {
     enable = true;
@@ -78,6 +124,9 @@
       "$runner" = "walker";
 
       "monitor" = "eDP-1, 1920x1080@60, 0x0, 1";
+
+      exec-once = ''${startupScript}/bin/start'';
+      
       general = with config.colorScheme.palette; {
 	"col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
 	"col.inactive_border" = "rgba(${base00}ff)";
