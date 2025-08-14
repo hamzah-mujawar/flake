@@ -43,6 +43,7 @@
     dogdns
     neovim
     bottom
+    walker
   ];
 
   
@@ -72,10 +73,6 @@
     userName = "Hamzah Mujawar";
     userEmail = "hamzah1faisal@gmail.com";
   };
-
-  programs.walker = {
-    enable = true;	
-  };		
 
   wayland.windowManager.hyprland = {
     enable = true;
