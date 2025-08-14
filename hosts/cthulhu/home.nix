@@ -51,6 +51,7 @@ in
     bottom
     walker
     swww
+    quickshell
   ];
   
   fonts.fontconfig.enable = true;
