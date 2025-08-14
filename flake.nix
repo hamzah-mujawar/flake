@@ -11,6 +11,7 @@
     };
     nix-colors.url = "github:misterio77/nix-colors";
     hyprland.url = "github:hyprwm/Hyprland";
+    swww.url = "github.com:LGFae/swww";
   };
 
   outputs = { nixpkgs, home-manager, hyprland, ... } @ inputs:
