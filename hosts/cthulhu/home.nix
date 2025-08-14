@@ -149,8 +149,10 @@ in
 	"$mod SHIFT, 9, movetoworkspace, 9"
 	"$mod SHIFT, 0, movetoworkspace, 10"
       ];
-      "disable_splash_rendering" = true;
-      "disable_hyprland_logo" = true;
+      misc = {
+	"disable_splash_rendering" = true;
+	"disable_hyprland_logo" = true;
+      };
     };
   };
 
