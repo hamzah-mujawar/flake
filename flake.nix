@@ -10,9 +10,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-colors.url = "github:misterio77/nix-colors";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, hyprland,  ... } @ inputs:
     {
       nixosConfigurations = {
         cthulhu = nixpkgs.lib.nixosSystem {
