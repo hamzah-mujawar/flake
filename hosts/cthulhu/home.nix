@@ -46,6 +46,17 @@ in
     neovim
     bottom
     walker
+    aylurs-gtk-shell-git
+    libgtop
+    bluez
+    bluez-utils
+    networkmanager
+    dart-sass
+    wl-clipboard
+    upower
+    gvfs
+    gtksourceview3
+    libsoup_3
   ];
   
   fonts.fontconfig.enable = true;
