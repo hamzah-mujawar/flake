@@ -1,9 +1,4 @@
 { inputs, config, pkgs, ... }:
-let
-  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    ${pkgs.hyprpanel}/bin/hyprpanel
-    '';
-in
 {
   # Imports
   imports = [
