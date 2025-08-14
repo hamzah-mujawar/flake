@@ -3,6 +3,7 @@
     ./services/x11.nix
     ./services/pipewire.nix
     ./services/gnome.nix
+    ./programs/hyprland.nix
     ./hardware/intelGraphics.nix
   ];
   intel.enable =
@@ -12,5 +13,7 @@
   pipewire.enable =
     lib.mkDefault true;
   gnome.enable =
+    lib.mkDefault true;
+  hyprland.enable =
     lib.mkDefault true;
 }
