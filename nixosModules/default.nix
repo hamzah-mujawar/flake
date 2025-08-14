@@ -11,8 +11,6 @@
     lib.mkDefault true;
   pipewire.enable =
     lib.mkDefault true;
-  gnome.enable =
-    lib.mkDefault true;
   hyprland.enable =
     lib.mkDefault true;
 }
