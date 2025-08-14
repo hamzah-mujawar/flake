@@ -43,7 +43,6 @@
     dogdns
     neovim
     bottom
-    walker
   ];
 
   
@@ -137,6 +136,10 @@
       ];
     };
   };
+
+  programs.walker = {
+    enable = true;
+  };	
 
   programs.kitty = {
     enable = true;
