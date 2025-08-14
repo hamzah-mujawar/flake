@@ -1,11 +1,13 @@
 { inputs, config, pkgs, ... }:
+
 let
   startupScript = pkgs.pkgs.writeScriptBin "start" ''
-   ${pkgs.swww}/bin/swww init &
+   ${pkgs.swww}/bin/swww-daemon &
    sleep 1
    ${pkgs.swww}/bin/swww img ${./disco.jpg} &
   '';
 in
+  
 {
   # Imports
   imports = [
