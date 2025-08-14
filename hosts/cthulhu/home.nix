@@ -137,10 +137,6 @@
     };
   };
 
-  programs.walker = {
-    enable = true;
-  };	
-
   programs.kitty = {
     enable = true;
     settings = {
