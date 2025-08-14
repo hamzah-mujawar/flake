@@ -41,6 +41,7 @@
     neovim
     bottom
     walker
+    swww
   ];
   
   fonts.fontconfig.enable = true;

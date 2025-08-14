@@ -54,7 +54,6 @@
     pciutils
     fastfetch
     clinfo
-    inputs.swww.packages.${pkgs.system}.swww
   ];
 
   programs.steam = {
