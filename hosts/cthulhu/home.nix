@@ -85,11 +85,11 @@
 
       "$mod" = "SUPER";
 
-      input {
+      input = {
       	"kb_layout" = "us";
 	"follow_mouse" = 1;
 	"sensitivity" = 0;
-	"touchpad" {
+	touchpad = {
 		"natural_scroll" = false;
 	}
       }
