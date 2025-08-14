@@ -25,7 +25,6 @@
   home.packages = with pkgs; [
     aspellDicts.en
     nerd-fonts.caskaydia-mono
-    gnome-themes-extra
     ripgrep
     nixd
     emacsPackages.jinx
@@ -36,16 +35,13 @@
     tinymist
     obsidian
     wl-clipboard
-    libgcc
     gcc
-    wl-screenrec
     fd
     dogdns
     neovim
     bottom
     walker
   ];
-
   
   fonts.fontconfig.enable = true;
   programs.direnv.enable = true;
@@ -80,6 +76,8 @@
     settings = {
       "$terminal" = "kitty";
       "$runner" = "walker";
+
+      "monitor" = "eDP-1, 1920x1080@60, 0x0, 1";
       general = with config.colorScheme.palette; {
 	"col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
 	"col.inactive_border" = "rgba(${base00}ff)";
