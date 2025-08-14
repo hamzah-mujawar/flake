@@ -106,7 +106,7 @@
 	"$mod, Q, exec, $terminal" # kitty my beloved
 	"$mod, M, exit"
 	"$mod, C, killactive"
-	"$mod, R, $runner" # walker my beloved
+	"$mod, R, exec, $runner" # walker my beloved
 	# focus mods
  	"$mod, H movefocus, l"
 	"$mod, L, movefocus, r"
