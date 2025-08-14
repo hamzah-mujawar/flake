@@ -72,6 +72,10 @@
     userName = "Hamzah Mujawar";
     userEmail = "hamzah1faisal@gmail.com";
   };
+
+  wayland.windowManager.hyprland = {
+    enable = true;
+  };
   
   programs.kitty = {
     enable = true;
@@ -138,4 +142,3 @@
 } 
 
 
-# I'm kinda ill today so i'm taking today slow, gonna chill with some zachtronics or smth like that
