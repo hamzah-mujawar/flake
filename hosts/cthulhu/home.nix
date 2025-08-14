@@ -155,7 +155,6 @@ in
       };
     };
   };
-
   programs.kitty = {
     enable = true;
     settings = {
