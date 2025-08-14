@@ -1,4 +1,11 @@
 { inputs, config, pkgs, ... }:
+let
+  startupScript = pkgs.pkgs.writeScriptBin "start" ''
+   ${pkgs.swww}/bin/swww init &
+   sleep 1
+   ${pkgs.swww}/bin/swww img ${./home/pickle/disco.jpg} &
+  '';
+in
 {
   # Imports
   imports = [
@@ -80,6 +87,8 @@
       "$runner" = "walker";
 
       "monitor" = "eDP-1, 1920x1080@60, 0x0, 1";
+
+      exec-once = ''${startupScript}/bin/start'';
 
       general = with config.colorScheme.palette; {
 	"col.active_border" = "rgba(${base0E}ff) rgba(${base09}ff) 60deg";
