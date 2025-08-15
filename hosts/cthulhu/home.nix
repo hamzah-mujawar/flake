@@ -53,6 +53,7 @@ in
       swww
       quickshell
       pavucontrol
+      ffmpeg-full
     ];
   
     fonts.fontconfig.enable = true;
