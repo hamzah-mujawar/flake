@@ -54,6 +54,7 @@ in
       quickshell
       pavucontrol
       ffmpeg-full
+      audacity
     ];
   
     fonts.fontconfig.enable = true;
