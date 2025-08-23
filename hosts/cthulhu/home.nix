@@ -53,8 +53,7 @@ in
       swww
       quickshell
       pavucontrol
-      ffmpeg-full
-      audacity
+      brightnessctl
     ];
   
     fonts.fontconfig.enable = true;
@@ -156,7 +155,16 @@ in
 	  "$mod SHIFT, 9, movetoworkspace, 9"
 	  "$mod SHIFT, 0, movetoworkspace, 10"
 	];
-	
+
+	# Laptop multimedia keys for volume and LCD brightness
+	bindel = [
+	  " ,XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+	  " ,XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+	  " ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+	  " ,XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+	  " ,XF86MonBrightnessUp, exec, brightnessctl -e4 -n2 set 5%+"
+	  " ,XF86MonBrightnessDown, exec, brightnessctl -e4 -n2 set 5%-"
+	];
 	misc = {
 	  "disable_splash_rendering" = true;
 	  "disable_hyprland_logo" = true;
