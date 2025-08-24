@@ -68,6 +68,9 @@
   services.logind.lidSwitchDocked = "ignore";
 
   
+  # Enable bluetooth
+  hardware.bluetooth.enable = true;
+
   # Make emacs the default text EDITOR
   environment.variables = {
     EDITOR = "emacs";
