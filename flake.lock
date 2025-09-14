@@ -453,6 +453,21 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1730531603,
+        "narHash": "sha256-Dqg6si5CqIzm87sp57j5nTaeBbWhHFaVyG7V6L8k3lY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "7ffd9ae656aec493492b44d0ddfb28e79a1ea25d",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-unstable",
+        "type": "indirect"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -474,6 +489,24 @@
         "owner": "cachix",
         "repo": "git-hooks.nix",
         "type": "github"
+      }
+    },
+    "qml": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1730724501,
+        "narHash": "sha256-zvNdomPM86fUf0iAwJV1RQC8yAqDCKbCDJKIs4iIPy0=",
+        "ref": "refs/heads/master",
+        "rev": "8f897ffb4a1575252c536c63db8be72f22b6a494",
+        "revCount": 1,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/nix-qml-support"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/nix-qml-support"
       }
     },
     "quickshell": {
@@ -502,6 +535,7 @@
         "hyprland": "hyprland",
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_2",
+        "qml": "qml",
         "quickshell": "quickshell",
         "zen-browser": "zen-browser"
       }

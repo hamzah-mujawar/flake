@@ -54,6 +54,8 @@
     pciutils
     fastfetch
     clinfo
+    tree-sitter-qmljs
+    qml-ts-mode
   ];
 
   programs.steam = {
