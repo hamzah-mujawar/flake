@@ -4,6 +4,7 @@
     ./services/keyring.nix
     ./programs/sway.nix
     ./services/kanshi.nix
+    ./services/greeter.nix
   ];
   
   intel.enable =
@@ -13,5 +14,7 @@
   keyring.enable =
     lib.mkDefault true;
   kanshi.enable = 
+    lib.mkDefault true;
+  greeter.enable =
     lib.mkDefault true;
 }
