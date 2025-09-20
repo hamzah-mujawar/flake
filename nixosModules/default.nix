@@ -3,6 +3,7 @@
     ./hardware/intelGraphics.nix
     ./services/keyring.nix
     ./programs/sway.nix
+    ./services/kanshi.nix
   ];
   
   intel.enable =
@@ -10,5 +11,7 @@
   sway.enable =
     lib.mkDefault true;
   keyring.enable =
+    lib.mkDefault true;
+  kanshi.enable = 
     lib.mkDefault true;
 }
