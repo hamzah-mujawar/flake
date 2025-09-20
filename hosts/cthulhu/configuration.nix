@@ -58,7 +58,6 @@
     slurp
     wl-clipboard
     mako
-    inputs.walker.packages.pickle.default
   ];
 
   programs.steam = {
