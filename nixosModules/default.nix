@@ -5,6 +5,7 @@
     ./programs/sway.nix
     ./services/kanshi.nix
     ./services/greeter.nix
+    ./services/screensharefix.nix
   ];
   
   intel.enable =
@@ -16,5 +17,7 @@
   kanshi.enable = 
     lib.mkDefault true;
   greeter.enable =
+    lib.mkDefault true;
+  screensharefix.enable =
     lib.mkDefault true;
 }
