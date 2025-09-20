@@ -10,6 +10,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-colors.url = "github:misterio77/nix-colors";
+    walker.url = "github:abenz1267/walker";
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:
