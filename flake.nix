@@ -10,15 +10,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-colors.url = "github:misterio77/nix-colors";
-    hyprland.url = "github:hyprwm/Hyprland";
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    qml.url = "git+https://git.outfoxxed.me/outfoxxed/nix-qml-support";
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, ... } @ inputs:
     {
       nixosConfigurations = {
         cthulhu = nixpkgs.lib.nixosSystem {

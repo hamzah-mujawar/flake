@@ -1,17 +1,14 @@
 { pkgs, lib, ... }: {
   imports = [
-    ./services/x11.nix
-    ./services/pipewire.nix
-    ./programs/hyprland.nix
     ./hardware/intelGraphics.nix
+    ./services/keyring.nix
+    ./programs/sway.nix
   ];
   
   intel.enable =
     lib.mkDefault true;
-  x11.enable =
+  sway.enable =
     lib.mkDefault true;
-  pipewire.enable =
-    lib.mkDefault true;
-  hyprland.enable =
+  keyring.enable =
     lib.mkDefault true;
 }

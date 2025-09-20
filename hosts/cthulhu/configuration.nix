@@ -54,7 +54,10 @@
     pciutils
     fastfetch
     clinfo
-    inetutils
+    grim
+    slurp
+    wl-clipboard
+    mako
   ];
 
   programs.steam = {
