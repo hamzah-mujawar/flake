@@ -15,4 +15,6 @@
 			ExecStart = ''${pkgs.kanshi}/bin/kanshi -c kanshi_config_file'';
 		};
   	};
+
+};
 }
