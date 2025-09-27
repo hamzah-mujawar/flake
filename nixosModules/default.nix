@@ -7,7 +7,6 @@
     ./services/greeter.nix
     ./services/screensharefix.nix
     ./programs/qemu.nix
-    ./programs/bash.nix
   ];
   
   intel.enable =
