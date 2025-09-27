@@ -6,6 +6,7 @@
     config = lib.mkIf config.qemu.enable {
       environment.systemPackages = [
 	pkgs.qemu
+	pkgs.quickemu
       ];
     };
 }
