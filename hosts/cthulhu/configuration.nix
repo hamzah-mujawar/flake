@@ -58,6 +58,7 @@
     slurp
     wl-clipboard
     mako
+    fzf
   ];
 
   
