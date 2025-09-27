@@ -6,6 +6,7 @@
     ./services/kanshi.nix
     ./services/greeter.nix
     ./services/screensharefix.nix
+    ./programs/qemu.nix
   ];
   
   intel.enable =
@@ -19,5 +20,7 @@
   greeter.enable =
     lib.mkDefault true;
   screensharefix.enable =
+    lib.mkDefault true;
+  qemu.enable =
     lib.mkDefault true;
 }
