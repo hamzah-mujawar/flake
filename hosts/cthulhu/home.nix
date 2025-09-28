@@ -19,16 +19,6 @@ in
     home.username = "pickle";
     home.homeDirectory = "/home/pickle";
 
-    programs.fish = {
-      enable = true;
-      interactiveShellInit = ''
-	set fish_greeting # Disable greeting
-      '';
-      plugins = [
-	{ name = "hydro"; src = pkgs.fishPlugins.hydro.src; }
-      ];
-    };
-
     # The home.packages option allows you to install Nix packages into your
     # environment.
     home.packages = with pkgs; [
