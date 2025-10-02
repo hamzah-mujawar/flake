@@ -59,6 +59,7 @@
     wl-clipboard
     mako
     satty
+    nodejs_24
   ];
 
   
