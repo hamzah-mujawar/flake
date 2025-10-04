@@ -61,6 +61,7 @@
     satty
     nodejs_24
     pavucontrol
+    vesktop
   ];
 
   
