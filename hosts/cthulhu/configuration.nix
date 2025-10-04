@@ -60,6 +60,7 @@
     mako
     satty
     nodejs_24
+    pavucontrol
   ];
 
   
