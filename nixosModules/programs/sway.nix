@@ -8,5 +8,7 @@
 	enable = true;
 	wrapperFeatures.gtk = true;
       };
+      programs.swaylock.enable = true;
+      security.pam.services.swaylock = {};
     };
 }
