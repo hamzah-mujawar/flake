@@ -8,6 +8,7 @@
     ./services/screensharefix.nix
     ./programs/qemu.nix
     ./programs/fish.nix
+    ./programs/steam.nix
   ];
   
   intel.enable =
@@ -25,5 +26,7 @@
   qemu.enable =
     lib.mkDefault true;
   fish.enable =
+    lib.mkDefault true;
+  steam.enable =
     lib.mkDefault true;
 }
