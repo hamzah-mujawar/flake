@@ -64,6 +64,7 @@
     vesktop
     flyctl
     jdk24
+    global
   ];
 
   
