@@ -62,6 +62,7 @@
     nodejs_24
     pavucontrol
     vesktop
+    flyctl
   ];
 
   
