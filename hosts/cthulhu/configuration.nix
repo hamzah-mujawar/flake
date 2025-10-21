@@ -66,6 +66,8 @@
     jdk24
     global
     jdt-language-server
+    unzip
+    zip
   ];
 
   
