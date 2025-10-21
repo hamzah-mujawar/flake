@@ -63,6 +63,7 @@
     pavucontrol
     vesktop
     flyctl
+    jdk24
   ];
 
   
