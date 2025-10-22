@@ -68,6 +68,7 @@
     jdt-language-server
     unzip
     zip
+    ungoogled-chromium
   ];
 
   
