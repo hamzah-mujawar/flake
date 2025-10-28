@@ -77,6 +77,7 @@ in
     cmake
     gnumake
     libtool
+    tmux-script
   ];
 
   programs.tmux = {
