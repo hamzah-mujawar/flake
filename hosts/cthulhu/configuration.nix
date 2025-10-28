@@ -63,7 +63,7 @@
     pavucontrol
     vesktop
     flyctl
-    jdk24
+    jdk
     global
     jdt-language-server
     unzip
