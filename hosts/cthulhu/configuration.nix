@@ -1,10 +1,5 @@
 { config, pkgs, inputs, ... }:
 
-let
-  tmux-script = pkgs.writeShellScriptBin "tmux-script" ''
-    echo "something"
-  '';
-in
 {
   nix.settings.experimental-features = ["nix-command" "flakes"];
   boot.kernelParams = [ "psmouse.synaptics_intertouch=0" ];
@@ -77,7 +72,6 @@ in
     cmake
     gnumake
     libtool
-    tmux-script
   ];
 
   programs.tmux = {
