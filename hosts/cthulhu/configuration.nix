@@ -71,7 +71,11 @@
     ungoogled-chromium
   ];
 
-  
+  programs.tmux = {
+    enable = true;
+    clock24 = true;
+  };
+    
   # Make laptop lid lock only
   services.logind.lidSwitch = "lock";
   services.logind.lidSwitchExternalPower = "lock";
