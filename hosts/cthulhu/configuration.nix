@@ -70,6 +70,7 @@
     zip
     ungoogled-chromium
     cmake
+    gnumake
   ];
 
   programs.tmux = {
