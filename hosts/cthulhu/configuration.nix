@@ -71,6 +71,7 @@
     ungoogled-chromium
     cmake
     gnumake
+    libtool
   ];
 
   programs.tmux = {
