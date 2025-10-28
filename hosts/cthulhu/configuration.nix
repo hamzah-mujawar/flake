@@ -1,5 +1,10 @@
 { config, pkgs, inputs, ... }:
 
+let
+  tmux-script = pkgs.writeShellScriptBin "tmux-script" ''
+    echo "something"
+  '';
+in
 {
   nix.settings.experimental-features = ["nix-command" "flakes"];
   boot.kernelParams = [ "psmouse.synaptics_intertouch=0" ];
@@ -78,7 +83,7 @@
     enable = true;
     clock24 = true;
   };
-    
+
   # Make laptop lid lock only
   services.logind.lidSwitch = "lock";
   services.logind.lidSwitchExternalPower = "lock";
