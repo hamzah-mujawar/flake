@@ -72,6 +72,7 @@
     cmake
     gnumake
     libtool
+    typescript-language-server
   ];
 
   programs.tmux = {
