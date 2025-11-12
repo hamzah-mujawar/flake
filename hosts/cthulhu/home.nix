@@ -56,14 +56,6 @@ in
 
     programs.zen-browser.enable = true;
   
-    programs.emacs = {
-      enable = true;
-      package = pkgs.emacs-pgtk;
-      extraPackages = epkgs: [
-	epkgs.treesit-grammars.with-all-grammars
-      ];
-    };
-
   
     programs.git = {
       enable = true;

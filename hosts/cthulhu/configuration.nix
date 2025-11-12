@@ -73,6 +73,9 @@
     gnumake
     libtool
     typescript-language-server
+    ((emacsPackagesFor emacs-pgtk).emacsWithPackages (
+      epkgs: [epkgs.vterm epkgs.treesit-grammars.with-all-grammars]
+    ))
   ];
 
   programs.tmux = {
