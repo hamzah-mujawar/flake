@@ -76,6 +76,7 @@
     ((emacsPackagesFor emacs-pgtk).emacsWithPackages (
       epkgs: [epkgs.vterm epkgs.treesit-grammars.with-all-grammars]
     ))
+    eslint_d
   ];
 
   programs.tmux = {
