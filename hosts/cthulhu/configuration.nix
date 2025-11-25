@@ -77,7 +77,6 @@
       epkgs: [epkgs.vterm epkgs.treesit-grammars.with-all-grammars]
     ))
     eslint_d
-    obsidian
   ];
 
   programs.tmux = {
