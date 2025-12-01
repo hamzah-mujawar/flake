@@ -77,6 +77,9 @@
       epkgs: [epkgs.vterm epkgs.treesit-grammars.with-all-grammars]
     ))
     eslint_d
+    man-db
+    man-pages
+    man-pages-posix
   ];
 
   programs.tmux = {
