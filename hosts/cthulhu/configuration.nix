@@ -80,10 +80,13 @@
     man-db
     man-pages
     man-pages-posix
-    mullvad-vpn
   ];
 
 
+
+  services.mullvad-vpn.enable = true;
+
+  
   programs.tmux = {
     enable = true;
     clock24 = true;
