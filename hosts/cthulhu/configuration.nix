@@ -82,6 +82,8 @@
     man-pages-posix
   ];
 
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
+
   programs.tmux = {
     enable = true;
     clock24 = true;
