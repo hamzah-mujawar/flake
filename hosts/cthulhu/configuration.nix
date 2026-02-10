@@ -80,7 +80,7 @@
     man-db
     man-pages
     man-pages-posix
-    ladybird
+    qutebrowser
   ];
 
 
