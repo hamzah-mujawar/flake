@@ -2,7 +2,7 @@
   imports = [
     ./hardware/intelGraphics.nix
     ./services/keyring.nix
-    ./programs/sway.nix
+    ./programs/niri.nix
     ./services/kanshi.nix
     ./services/greeter.nix
     ./services/screensharefix.nix
@@ -13,7 +13,7 @@
   
   intel.enable =
     lib.mkDefault true;
-  sway.enable =
+  niri.enable =
     lib.mkDefault true;
   keyring.enable =
     lib.mkDefault true;
