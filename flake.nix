@@ -11,6 +11,10 @@
     };
     nix-colors.url = "github:misterio77/nix-colors";
     walker.url = "github:abenz1267/walker";
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      input.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:
