@@ -5,5 +5,6 @@
     };
     config = lib.mkIf config.niri.enable {
         programs.niri.enable = true;
+	programs.niri.package = pkgs.niri-unstable;
     };
 }
