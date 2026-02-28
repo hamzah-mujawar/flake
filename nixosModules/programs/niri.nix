@@ -5,6 +5,7 @@
     };
     config = lib.mkIf config.niri.enable {
         programs.niri.enable = true;
-	programs.niri.package = pkgs.niri-unstable;
+	nixpkgs.overlays = [ niri.overlays.niri ];
+	programs.niri.package = pkgs.niri-stable;
     };
 }
