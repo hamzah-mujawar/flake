@@ -82,6 +82,7 @@
     man-pages-posix
     qutebrowser
     inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
+    waybar
   ];
 
   programs.tmux = {
