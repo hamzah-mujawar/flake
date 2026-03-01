@@ -15,6 +15,7 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    awww.url = "git+https://codeberg.org/LGFae/awww";
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:
