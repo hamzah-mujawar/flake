@@ -1,44 +1,5 @@
 { config, pkgs, inputs, ... }:
-let tree-sitter-parsers = grammars: with grammars; [
-    tree-sitter-bash
-    tree-sitter-c
-    tree-sitter-c-sharp
-    tree-sitter-cmake
-    tree-sitter-cpp
-    tree-sitter-css
-    tree-sitter-dot
-    tree-sitter-elisp
-    tree-sitter-glsl
-    tree-sitter-haskell
-    tree-sitter-html
-    tree-sitter-java
-    tree-sitter-javascript
-    tree-sitter-json
-    tree-sitter-json5
-    tree-sitter-kotlin
-    tree-sitter-latex
-    tree-sitter-llvm
-    tree-sitter-lua
-    tree-sitter-make
-    tree-sitter-markdown
-    tree-sitter-markdown-inline
-    tree-sitter-nickel
-    tree-sitter-nix
-    tree-sitter-prisma
-    tree-sitter-python
-    inputs.nix-qml-support.packages.${pkgs.stdenv.system}.tree-sitter-qmljs
-    tree-sitter-regex
-    tree-sitter-rust
-    tree-sitter-scss
-    tree-sitter-sql
-    tree-sitter-toml
-    tree-sitter-tsx
-    tree-sitter-typescript
-    tree-sitter-vim
-    tree-sitter-yaml
-    tree-sitter-zig
-  ];
-in {
+{
   nix.settings.experimental-features = ["nix-command" "flakes"];
   boot.kernelParams = [ "psmouse.synaptics_intertouch=0" ];
 
@@ -112,7 +73,7 @@ in {
     libtool
     typescript-language-server
     ((emacsPackagesFor emacs-pgtk).emacsWithPackages (
-      epkgs: [epkgs.vterm epkgs.treesit-grammars.with-grammars (grammars: tree-sitter-parsers grammars) inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.qml-ts-mode
+      epkgs: [epkgs.vterm epkgs.treesit-grammars.with-all-grammars inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.qml-ts-mode epkgs.tresit-grammars.with-grammars (grammars: [ inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.tree-sitter-qmljs ])
  ]
     ))
     eslint_d
