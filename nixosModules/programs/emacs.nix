@@ -110,7 +110,7 @@ in {
 
       services.emacs = {
 	enable = true;
-	package = pkgs.custom-emacs;
+	package = custom-emacs;
       };
     };
 }
