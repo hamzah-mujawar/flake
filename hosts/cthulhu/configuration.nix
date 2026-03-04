@@ -82,6 +82,7 @@
     inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.tree-sitter-qmljs
     inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.qml-ts-mode
     kdePackages.qtdeclarative
+    xwayland-satellite
   ];
 
   programs.tmux = {

@@ -4,7 +4,7 @@
       lib.mkEnableOption "enables helix";
   };
   config = lib.mkIf config.helix.enable {
-    environment.systemPacakges = with pkgs; [
+    environment.systemPackages = with pkgs; [
       helix
     ];
   };
