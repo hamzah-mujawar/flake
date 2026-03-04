@@ -28,6 +28,11 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-qml-support = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/nix-qml-support";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:
