@@ -9,6 +9,7 @@
     ./programs/qemu.nix
     ./programs/fish.nix
     ./programs/steam.nix
+    ./programs/emacs.nix
   ];
   
   intel.enable =
@@ -28,5 +29,7 @@
   fish.enable =
     lib.mkDefault true;
   steam.enable =
+    lib.mkDefault true;
+  emacs.enable =
     lib.mkDefault true;
 }

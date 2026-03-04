@@ -72,9 +72,6 @@
     gnumake
     libtool
     typescript-language-server
-    ((emacsPackagesFor emacs-pgtk).emacsWithPackages (
-      epkgs: [epkgs.vterm epkgs.treesit-grammars.with-all-grammars inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.qml-ts-mode ]
-    ))
     eslint_d
     man-db
     man-pages
