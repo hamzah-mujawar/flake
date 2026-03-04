@@ -73,8 +73,7 @@
     libtool
     typescript-language-server
     ((emacsPackagesFor emacs-pgtk).emacsWithPackages (
-      epkgs: [epkgs.vterm epkgs.treesit-grammars.with-all-grammars inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.qml-ts-mode epkgs.treesit-grammars.with-grammars (grammars: [ inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.tree-sitter-qmljs ])
- ]
+      epkgs: [epkgs.vterm epkgs.treesit-grammars.with-all-grammars inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.qml-ts-mode ]
     ))
     eslint_d
     man-db
