@@ -10,6 +10,7 @@
     ./programs/fish.nix
     ./programs/steam.nix
     ./programs/emacs.nix
+    ./programs/helix.nix
   ];
   
   intel.enable =
@@ -31,5 +32,7 @@
   steam.enable =
     lib.mkDefault true;
   emacs.enable =
+    lib.mkDefault true;
+  helix.enable =
     lib.mkDefault true;
 }
