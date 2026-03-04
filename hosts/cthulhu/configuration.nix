@@ -81,7 +81,7 @@
     inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.tree-sitter-qmljs
     inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.qml-ts-mode
-
+    kdePackages.qtdeclarative
   ];
 
   programs.tmux = {

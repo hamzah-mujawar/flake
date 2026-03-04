@@ -4,14 +4,8 @@
       emacs
       package
     ]);
-
-qmljs-grammar-fixed = pkgs.runCommand "tree-sitter-qmljs-fixed" {} ''
-  mkdir -p $out/lib
-  cp /nix/store/pssghpcq6mqnbj855g8lmddd0vnwkszs-emacs-packages-deps/lib/libqmljs.so \
-     $out/lib/libtree-sitter-qmljs.so
-'';
-
-  tree-sitter-parsers = grammars: with grammars; [
+    
+    tree-sitter-parsers = grammars: with grammars; [
     tree-sitter-bash
     tree-sitter-c
     tree-sitter-c-sharp
@@ -38,7 +32,7 @@ qmljs-grammar-fixed = pkgs.runCommand "tree-sitter-qmljs-fixed" {} ''
     tree-sitter-nix
     tree-sitter-prisma
     tree-sitter-python
-    qmljs-grammar-fixed
+    inputs.nix-qml-support.packages.${pkgs.stdenv.system}.tree-sitter-qmljs
     tree-sitter-regex
     tree-sitter-rust
     tree-sitter-scss
