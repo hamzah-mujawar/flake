@@ -7,7 +7,13 @@
     home-manager.url = "github:nix-community/home-manager";
     
     home-manager.inputs.nixpkgs.follows =  "nixpkgs";
-    
+
+    emacs-overlay = {
+      url = "github:nix-community/emacs-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs-stable.follows = "stable";
+    };
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
