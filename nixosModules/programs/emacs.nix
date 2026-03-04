@@ -50,8 +50,11 @@
     ((emacsPackagesFor (emacs30-pgtk.override { withNativeCompilation = true; })).emacsWithPackages (epkgs: with epkgs; [
       vterm
       inputs.nix-qml-support.packages.${pkgs.stdenv.system}.qml-ts-mode
-      (treesit-grammars.with-grammars (grammars: tree-sitter-parsers grammars))
-    ]));
+      (treesit-grammars.with-grammars (grammars:
+  (tree-sitter-parsers grammars) ++
+  [ inputs.nix-qml-support.packages.${pkgs.stdenv.system}.tree-sitter-qmljs ]
+	))]
+     ));
 
   
 in {
