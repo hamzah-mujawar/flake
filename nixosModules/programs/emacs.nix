@@ -45,12 +45,58 @@
     tree-sitter-zig
     ];
 
-  custom-emacs =
+   custom-emacs =
     with newpkgs;
-((emacsPackagesFor (emacs30-pgtk.override  { withNativeCompilation = true; }).emacsWithPackages (epkgs: with epkgs; [
-  inputs.nix-qml-support.packages.${pkgs.stdenv.system}.qml-ts-mode
-  (treesit-grammars.with-grammars (grammars: tree-sitter-parsers grammars))
-])));
+    ((emacsPackagesFor (emacs30-pgtk.override { withNativeCompilation = true; })).emacsWithPackages (epkgs: with epkgs; [
+      aidermacs transient
+      avy
+      better-jumper
+      company
+      crux
+      cmake-font-lock
+      direnv
+      editorconfig
+      evil
+      evil-collection
+      evil-goggles
+      face-explorer
+      flycheck
+      frames-only-mode
+      fussy
+      glsl-mode
+      groovy-mode
+      haskell-ts-mode
+      just-mode
+      kotlin-mode
+      lsp-mode
+      lsp-treemacs
+      lsp-ui
+      lsp-haskell
+      lsp-java
+      dap-mode
+      magit
+      markdown-mode
+      nasm-mode
+      nix-mode reformatter # required by nix mode
+      projectile
+      inputs.nix-qml-support.packages.${pkgs.stdenv.system}.qml-ts-mode
+      astro-ts-mode
+      rainbow-mode
+      string-inflection
+      (treesit-grammars.with-grammars (grammars: tree-sitter-parsers grammars))
+      treemacs
+      treemacs-evil
+      treemacs-projectile
+      treemacs-magit
+      undo-tree
+      use-package
+      vertico
+      which-key
+      melpaPackages.ws-butler
+      minuet
+      zig-ts-mode
+    ]));
+
   
 in {
     options = {
