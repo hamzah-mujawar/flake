@@ -4,12 +4,13 @@
       emacs
       package
     ]);
-  qmljs-grammar-fixed = pkgs.runCommand "tree-sitter-qmljs-fixed" {} ''
-    mkdir -p $out/lib
-  cp ${inputs.nix-qml-support.packages.${pkgs.stdenv.system}.tree-sitter-qmljs}/lib/libqmljs.so \
+
+qmljs-grammar-fixed = pkgs.runCommand "tree-sitter-qmljs-fixed" {} ''
+  mkdir -p $out/lib
+  cp /nix/store/pssghpcq6mqnbj855g8lmddd0vnwkszs-emacs-packages-deps/lib/libqmljs.so \
      $out/lib/libtree-sitter-qmljs.so
-  '';
-  
+'';
+
   tree-sitter-parsers = grammars: with grammars; [
     tree-sitter-bash
     tree-sitter-c
