@@ -4,8 +4,13 @@
       emacs
       package
     ]);
-
-    tree-sitter-parsers = grammars: with grammars; [
+  qmljs-grammar-fixed = pkgs.runCommand "tree-sitter-qmljs-fixed" {} ''
+    mkdir -p $out/lib
+  cp ${inputs.nix-qml-support.packages.${pkgs.stdenv.system}.tree-sitter-qmljs}/lib/libqmljs.so \
+     $out/lib/libtree-sitter-qmljs.so
+  '';
+  
+  tree-sitter-parsers = grammars: with grammars; [
     tree-sitter-bash
     tree-sitter-c
     tree-sitter-c-sharp
@@ -32,7 +37,7 @@
     tree-sitter-nix
     tree-sitter-prisma
     tree-sitter-python
-    inputs.nix-qml-support.packages.${pkgs.stdenv.system}.tree-sitter-qmljs
+    qmljs-grammar-fixed
     tree-sitter-regex
     tree-sitter-rust
     tree-sitter-scss
@@ -50,11 +55,8 @@
     ((emacsPackagesFor (emacs30-pgtk.override { withNativeCompilation = true; })).emacsWithPackages (epkgs: with epkgs; [
       vterm
       inputs.nix-qml-support.packages.${pkgs.stdenv.system}.qml-ts-mode
-      (treesit-grammars.with-grammars (grammars:
-  (tree-sitter-parsers grammars) ++
-  [ inputs.nix-qml-support.packages.${pkgs.stdenv.system}.tree-sitter-qmljs ]
-	))]
-     ));
+      (treesit-grammars.with-grammars (grammars: tree-sitter-parsers grammars))
+    ]));
 
   
 in {
