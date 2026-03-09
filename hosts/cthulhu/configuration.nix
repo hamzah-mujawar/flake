@@ -86,6 +86,7 @@
     transmission_4-qt
     mpv
     gdb
+    elephant
   ];
 
   services.mullvad-vpn.enable = true;
