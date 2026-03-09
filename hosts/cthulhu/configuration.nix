@@ -83,6 +83,7 @@
     inputs.nix-qml-support.packages.${pkgs.stdenv.hostPlatform.system}.qml-ts-mode
     kdePackages.qtdeclarative
     xwayland-satellite
+    ccls
   ];
 
   programs.tmux = {
