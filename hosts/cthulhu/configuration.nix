@@ -86,13 +86,21 @@
     transmission_4-qt
     mpv
     gdb
+    inputs.walker.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.elephant.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   services.mullvad-vpn.enable = true;
+
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
+  
   programs.tmux = {
     enable = true;
     clock24 = true;
+  };
+
+  programs.walker = {
+    enable = true;
   };
 
   programs.nh = {
