@@ -86,6 +86,7 @@
     transmission_4-qt
     mpv
     gdb
+    inputs.walker.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.walker = {
