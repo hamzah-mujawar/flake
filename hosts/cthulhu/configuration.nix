@@ -86,8 +86,8 @@
     transmission_4-qt
     mpv
     gdb
-    inputs.nh.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
+
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
   programs.tmux = {
@@ -95,6 +95,17 @@
     clock24 = true;
   };
 
+  programs.nh = {
+    enable = true;
+    package = inputs.nh.packages.${pkgs.stdenv.hostPlatform.system}.nh;
+
+    flake = "/home/pickle/flake";
+
+    clean = {
+      enable = true;
+      dates = "weekly";
+    }
+  };
   # Make laptop lid lock only
   services.logind.lidSwitch = "lock";
   services.logind.lidSwitchExternalPower = "lock";
