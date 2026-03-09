@@ -84,8 +84,10 @@
     kdePackages.qtdeclarative
     xwayland-satellite
     ccls
+    transmission_4-qt
   ];
-
+  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
   programs.tmux = {
     enable = true;
     clock24 = true;
