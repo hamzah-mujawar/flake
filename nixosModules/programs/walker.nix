@@ -10,7 +10,7 @@
       package = inputs.walker.packages.${pkgs.stdenv.hostPlatform.system}.default;      
       runAsService = true;
     };
-    programs.elephant = {
+    services.elephant = {
       enable = true;
       package = inputs.elephant.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
