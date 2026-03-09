@@ -6,6 +6,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.walker.homeManagerModules.default
     ];
 
   # Bootloader.
@@ -86,7 +87,6 @@
     transmission_4-qt
     mpv
     gdb
-    inputs.walker.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.walker = {
