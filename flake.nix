@@ -38,6 +38,9 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/nix-qml-support";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nh = {
+      url = "github:nix-community/nh";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:

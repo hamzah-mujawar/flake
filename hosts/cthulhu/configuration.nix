@@ -86,6 +86,7 @@
     transmission_4-qt
     mpv
     gdb
+    inputs.nh.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
