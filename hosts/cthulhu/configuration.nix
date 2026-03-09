@@ -86,6 +86,7 @@
     ccls
     transmission_4-qt
     mpv
+    gdb
   ];
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
