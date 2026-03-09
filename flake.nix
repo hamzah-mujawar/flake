@@ -20,12 +20,13 @@
     
     nix-colors.url = "github:misterio77/nix-colors";
     
+    elephant.url = "github:abenz1267/elephant";
+
     walker = {
       url = "github:abenz1267/walker";
       inputs.elephant.follows = "elephant";
     };
 
-    elephant.url = "github:abenz1267/elephant";
     
     niri = {
       url = "github:sodiboo/niri-flake";

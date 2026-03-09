@@ -5,8 +5,10 @@
       lib.mkEnableOption "enables walker";
   };
   config = lib.mkIf config.walker.enable {
-    environment.systemPackages = [inputs.walker.packages.${pkgs.stdenv.hostPlatform.system}.default
-    inputs.elephant.packages.${pkgs.stdenv.hostPlatform.system}.default];
+    environment.systemPackages = [
+      inputs.walker.packages.${pkgs.stdenv.hostPlatform.system}.default
+      inputs.elephant.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ];
     programs.walker = {
       enable = true;
     }
