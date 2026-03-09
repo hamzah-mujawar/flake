@@ -2,6 +2,7 @@
   description = "Flake flake flake flake";
 
   inputs = {
+
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     
     home-manager.url = "github:nix-community/home-manager";
@@ -20,14 +21,6 @@
     
     nix-colors.url = "github:misterio77/nix-colors";
     
-    elephant.url = "github:abenz1267/elephant";
-
-    walker = {
-      url = "github:abenz1267/walker";
-      inputs.elephant.follows = "elephant";
-    };
-
-    
     niri = {
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -44,8 +37,16 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/nix-qml-support";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nh = {
       url = "github:nix-community/nh";
+    };
+    
+    elephant.url = "github:abenz1267/elephant";
+
+    walker = {
+      url = "github:abenz1267/walker";
+      inputs.elephant.follows = "elephant";
     };
   };
 

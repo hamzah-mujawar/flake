@@ -1,13 +1,5 @@
 { inputs, config, pkgs, ... }:
 
-let
-  startupScript = pkgs.pkgs.writeScriptBin "start" ''
-    ${pkgs.swww}/bin/swww-daemon &
-   sleep 1
-   ${pkgs.swww}/bin/swww img ${./disco.jpg} &
-  '';
-in
-  
   {
     # Imports
     imports = [
@@ -22,25 +14,7 @@ in
     # The home.packages option allows you to install Nix packages into your
     # environment.
     home.packages = with pkgs; [
-      aspellDicts.en
-      nerd-fonts.caskaydia-mono
-      ripgrep
-      nixd
-      emacsPackages.jinx
-      hunspell
-      hunspellDicts.en_GB-ise
-      zotero
-      typst
-      tinymist
-      gcc
-      fd
-      doggo
-      neovim
-      bottom
-      walker
-      swww
-      pavucontrol
-      brightnessctl
+
     ];
   
     fonts.fontconfig.enable = true;
