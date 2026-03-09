@@ -104,7 +104,7 @@
     clean = {
       enable = true;
       dates = "weekly";
-    }
+    };
   };
   # Make laptop lid lock only
   services.logind.lidSwitch = "lock";
