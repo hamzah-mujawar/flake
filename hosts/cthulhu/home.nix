@@ -34,7 +34,7 @@ in
       tinymist
       gcc
       fd
-      dogdns
+      doggo
       neovim
       bottom
       walker
