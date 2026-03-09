@@ -85,6 +85,7 @@
     xwayland-satellite
     ccls
     transmission_4-qt
+    mpv
   ];
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
