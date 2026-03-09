@@ -63,7 +63,6 @@
     vesktop
     flyctl
     jdk
-    global
     jdt-language-server
     unzip
     zip
