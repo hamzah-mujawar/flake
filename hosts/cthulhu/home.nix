@@ -74,7 +74,6 @@
         )
       '';
     };
-  };
   
     programs.kitty = {
       enable = true;
