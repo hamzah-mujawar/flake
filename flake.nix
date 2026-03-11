@@ -70,7 +70,7 @@
                     # disable anyrun's home-manager module to avoid redefinitions
                     disabledModules = ["${modulesPath}/programs/anyrun.nix"];
                 })
-                anyrun.homeManagerModules.default
+                inputs.anyrun.homeManagerModules.default
                 {
                     programs.anyrun.enable = true;
                 }
