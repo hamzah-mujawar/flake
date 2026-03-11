@@ -54,11 +54,6 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-            ({ modulesPath, ... }: {
-                      # Important! We disable home-manager's module to avoid option
-                      # definition collisions
-                      disabledModules = ["${modulesPath}/programs/anyrun.nix"];
-            })
             ./hosts/cthulhu/configuration.nix
             ./nixosModules
             home-manager.nixosModules.home-manager
@@ -67,7 +62,12 @@
               home-manager.useUserPackages = true;
               home-manager.users.pickle = ./hosts/cthulhu/home.nix;
 
-              home-manager.extraSpecialArgs = { inherit inputs; }; 
+              home-manager.extraSpecialArgs = { inherit inputs; };
+	    ({ modulesPath, ... }: {
+              # Important! We disable home-manager's module to avoid option
+              # definition collisions
+              disabledModules = ["${modulesPath}/programs/anyrun.nix"];
+            })
             }
           ];
         };
