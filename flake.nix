@@ -41,13 +41,10 @@
     nh = {
       url = "github:nix-community/nh";
     };
-    
-    elephant.url = "github:abenz1267/elephant";
 
-    walker = {
-      url = "github:abenz1267/walker";
-      inputs.elephant.follows = "elephant";
-    };
+    anyrun = {
+      url = "github:anyrun-org/anyrun";
+    };   
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:
