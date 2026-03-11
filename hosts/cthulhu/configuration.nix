@@ -113,6 +113,7 @@
         enable = true;
         name = "tokyonight";
         transparent = true;
+        style = "night";
       };
       vim.viAlias = false;
       vim.vimAlias = true;
