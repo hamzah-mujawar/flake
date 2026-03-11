@@ -38,7 +38,6 @@
       userEmail = "hamzah1faisal@gmail.com";
     };
 
-    {
     programs.anyrun = {
       enable = true;
       config = {
