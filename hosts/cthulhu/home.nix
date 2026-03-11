@@ -5,6 +5,7 @@
     imports = [
       inputs.zen-browser.homeModules.twilight
       inputs.nix-colors.homeManagerModules.default
+      inputs.anyrun.homeManagerModules.default
     ];
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
@@ -37,12 +38,49 @@
       userEmail = "hamzah1faisal@gmail.com";
     };
 
-    
+    {
+    programs.anyrun = {
+      enable = true;
+      config = {
+        x = { fraction = 0.5; };
+        y = { fraction = 0.3; };
+        width = { fraction = 0.3; };
+        hideIcons = false;
+        ignoreExclusiveZones = false;
+        layer = "overlay";
+        hidePluginInfo = false;
+        closeOnClick = false;
+        showResultsImmediately = false;
+        maxEntries = null;
+
+      plugins = [
+        "${pkgs.anyrun}/lib/libapplications.so"
+        "${pkgs.anyrun}/lib/libsymbols.so"
+        ];
+      };
+
+      # Inline comments are supported for language injection into
+      # multi-line strings with Treesitter! (Depends on your editor)
+      extraCss = /*css */ ''
+        .some_class {
+          background: red;
+        }
+      '';
+
+      extraConfigFiles."some-plugin.ron".text = ''
+        Config(
+          // for any other plugin
+          // this file will be put in ~/.config/anyrun/some-plugin.ron
+          // refer to docs of xdg.configFile for available options
+        )
+      '';
+    };
+  }
     programs.kitty = {
       enable = true;
       settings = {
-	active_tab_foreground = "#${config.colorScheme.palette.base00}";
-	active_tab_background = "#${config.colorScheme.palette.base0D}";
+      	active_tab_foreground = "#${config.colorScheme.palette.base00}";
+      	active_tab_background = "#${config.colorScheme.palette.base0D}";
 
 	foreground = "#${config.colorScheme.palette.base05}";
 	background = "#${config.colorScheme.palette.base00}";

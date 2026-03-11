@@ -86,7 +86,6 @@
     transmission_4-qt
     mpv
     gdb
-    inputs.anyrun.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   services.mullvad-vpn.enable = true;
