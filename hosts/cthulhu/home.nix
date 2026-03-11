@@ -39,6 +39,7 @@
 
     programs.anyrun = {
       enable = true;
+      package = anyrun.packages.${pkgs.stdenv.hostPackages.system}.anyrun-with-all-plugins;
       config = {
         x = { fraction = 0.5; };
         y = { fraction = 0.3; };
