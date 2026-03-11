@@ -109,6 +109,11 @@
     enable = true;
 
     settings  = {
+      vim.theme = {
+        enable = true;
+        name = "tokyonight";
+        transparent = true;
+      };
       vim.viAlias = false;
       vim.vimAlias = true;
       vim.lsp = {
@@ -121,7 +126,6 @@
       vim.startPlugins = [
         "tokyonight"             
       ];
-      vim.cmd[[colorscheme tokyonight]]
    };
   };
 
