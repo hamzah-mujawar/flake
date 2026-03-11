@@ -42,9 +42,6 @@
       url = "github:nix-community/nh";
     };
 
-    anyrun = {
-      url = "github:anyrun-org/anyrun";
-    };   
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:
@@ -63,11 +60,6 @@
               home-manager.users.pickle = ./hosts/cthulhu/home.nix;
 
               home-manager.extraSpecialArgs = { inherit inputs; };
-	    ({ modulesPath, ... }: {
-              # Important! We disable home-manager's module to avoid option
-              # definition collisions
-              disabledModules = ["${modulesPath}/programs/anyrun.nix"];
-            })
             }
           ];
         };

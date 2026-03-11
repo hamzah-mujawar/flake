@@ -5,7 +5,6 @@
     imports = [
       inputs.zen-browser.homeModules.twilight
       inputs.nix-colors.homeManagerModules.default
-      inputs.anyrun.homeManagerModules.default
     ];
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
