@@ -46,6 +46,7 @@
       url = "github:NotAShelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
   };
 
   outputs = { nixpkgs, home-manager, nvf, ... } @ inputs:

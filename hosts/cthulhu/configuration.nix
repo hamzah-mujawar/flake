@@ -114,6 +114,13 @@
       vim.lsp = {
         enable = true;
       };
+      vim.options = {
+        nu = true;
+        relativenumbers = true;
+     };
+      vim.startPlugins = [
+        "tokyonight"             
+      ];
     };
   };
 
