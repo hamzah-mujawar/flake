@@ -116,7 +116,7 @@
       };
       vim.options = {
         nu = true;
-        relativenumbers = true;
+        relativenumber = true;
      };
       vim.startPlugins = [
         "tokyonight"             
