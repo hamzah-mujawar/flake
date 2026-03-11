@@ -90,6 +90,20 @@
     xdg-desktop-portal-gnome
     gnome-keyring
     fuzzel
+    aspellDicts.en
+    nerd-fonts.caskaydia-mono
+    ripgrep
+    nixd
+    emacsPackages.jinx
+    hunspell
+    hunspellDicts.en_GB-ise
+    typst
+    tinymist
+    gcc
+    fd
+    bottom
+    pavucontrol
+    brightnessctl
   ];
 
   services.mullvad-vpn.enable = true;

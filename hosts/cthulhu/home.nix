@@ -37,6 +37,7 @@
       userEmail = "hamzah1faisal@gmail.com";
     };
 
+  
     programs.kitty = {
       enable = true;
       settings = {
