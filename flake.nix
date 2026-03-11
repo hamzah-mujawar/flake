@@ -42,7 +42,6 @@
       url = "github:nix-community/nh";
     };
 
-    anyrun.url = "github:anyrun-org/anyrun";
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:
@@ -63,18 +62,6 @@
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
           ];
-        };
-        homeConfigurations.user = home-manager.lib.homeManagerConfiguration {
-            modules = [         
-                ({ modulesPath, ...}: {
-                    # disable anyrun's home-manager module to avoid redefinitions
-                    disabledModules = ["${modulesPath}/programs/anyrun.nix"];
-                })
-                inputs.anyrun.homeManagerModules.default
-                {
-                    programs.anyrun.enable = true;
-                }
-            ];
         };
       };
     };

@@ -89,6 +89,7 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-gnome
     gnome-keyring
+    fuzzel
   ];
 
   services.mullvad-vpn.enable = true;
