@@ -42,15 +42,20 @@
       url = "github:nix-community/nh";
     };
 
+    nvf = {
+      url = "github:NotAShelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs:
+  outputs = { nixpkgs, home-manager, nvf, ... } @ inputs:
     {
       nixosConfigurations = {
         cthulhu = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
+	    nvf.nixosModules.default
             ./hosts/cthulhu/configuration.nix
             ./nixosModules
             home-manager.nixosModules.home-manager

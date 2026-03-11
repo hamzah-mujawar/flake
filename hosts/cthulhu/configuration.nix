@@ -105,6 +105,18 @@
     brightnessctl
   ];
 
+  programs.nvf = {
+    enable = true;
+
+    settings  = {
+      vim.viAlias = false;
+      vim.vimAlias = true;
+      vim.lsp = {
+        enable = true;
+      };
+    };
+  };
+
   services.mullvad-vpn.enable = true;
 
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
