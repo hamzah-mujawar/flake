@@ -91,7 +91,6 @@
     gnome-keyring
     fuzzel
     aspellDicts.en
-    nerd-fonts.caskaydia-mono
     ripgrep
     nixd
     emacsPackages.jinx
