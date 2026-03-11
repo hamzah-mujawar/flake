@@ -127,7 +127,36 @@
       vim.startPlugins = [
         "tokyonight"             
       ];
-   };
+      vim.telescope = {
+        enable = true;
+        extension = [
+                name = "fzf";
+                packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
+                setup = {fzf = {fuzzy = true;};};                
+        ];
+        vim.telescope.mappings.buffers = "fb";
+        vim.telescope.mappings.diagnostics = "fld";
+        vim.telescope.mappings.findFiles = "ff";
+        vim.telescope.mappings.findProjects = "fp";
+        vim.telescope.mappings.gitBranches = "fvb";
+        vim.telescope.mappings.gitBufferCommits = "fvcb";
+        vim.telescope.mappings.gitCommits = "fvcw";
+        vim.telescope.mappings.gitFiles = "fvf";
+        vim.telescope.mappings.gitStash = "fvx";
+        vim.telescope.mappings.gitStatus = "fvs";
+        vim.telescope.mappings.helpTags = "fh";
+        vim.telescope.mappings.liveGrep = "fg";
+        vim.telescope.mappings.lspDefinitions = "flD";
+        vim.telescope.mappings.lspDocumentSymbols = "flsb";
+        vim.telescope.mappings.lspReferences = "flr";
+        vim.telescope.mappings.lspTypeDefinitions = "flt";
+        vim.telescope.mappings.lspWorkspaceSymbols = "flsw";
+        vim.telescope.mappings.open = "ft";
+        vim.telescope.mappings.resume = "fr";
+        vim.telescope.mappings.treesitter = "fs";
+        setupOpts.defaults.color_devicons = true;
+
+      };
   };
 
   services.mullvad-vpn.enable = true;
