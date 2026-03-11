@@ -130,10 +130,12 @@
       vim.telescope = {
         enable = true;
         extension = [
+         {
                 name = "fzf";
                 packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
                 setup = {fzf = {fuzzy = true;};};                
-        ];
+         } 
+      ];
         vim.telescope.mappings.buffers = "fb";
         vim.telescope.mappings.diagnostics = "fld";
         vim.telescope.mappings.findFiles = "ff";
