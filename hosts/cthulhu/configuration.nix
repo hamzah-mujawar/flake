@@ -117,11 +117,12 @@
       vim.options = {
         nu = true;
         relativenumber = true;
-     };
+      };
       vim.startPlugins = [
         "tokyonight"             
       ];
-    };
+      vim.cmd[[colorscheme tokyonight]]
+   };
   };
 
   services.mullvad-vpn.enable = true;
