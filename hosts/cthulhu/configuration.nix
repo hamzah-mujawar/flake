@@ -86,6 +86,9 @@
     transmission_4-qt
     mpv
     gdb
+    xdg-desktop-portal-gtk
+    xdg-desktop-portal-gnome
+    gnome-keyring
   ];
 
   services.mullvad-vpn.enable = true;
