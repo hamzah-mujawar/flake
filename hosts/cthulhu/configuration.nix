@@ -129,7 +129,7 @@
       ];
       vim.telescope = {
         enable = true;
-        extension = [
+        extensions = [
          {
                 name = "fzf";
                 packages = [pkgs.vimPlugins.telescope-fzf-native-nvim];
@@ -159,7 +159,7 @@
         setupOpts.defaults.color_devicons = true;
 
       };
-   };
+  };
 };
   services.mullvad-vpn.enable = true;
 
