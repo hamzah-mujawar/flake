@@ -103,6 +103,7 @@
     bottom
     pavucontrol
     brightnessctl
+    starship
   ];
 
   programs.nvf = {
