@@ -71,7 +71,7 @@
 	sync_to_monitor = "yes";
 	tab_bar_style = "powerline";
 	tab_powerline_style = "round";
-	font_family = "CaskaydiaMono NF";
+	font_family = "Miracode";
 	bold_font = "auto";
 	italic_font = "auto";
 	bold_italic_font = "auto";
