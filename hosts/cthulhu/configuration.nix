@@ -111,9 +111,9 @@
     settings  = {
       vim.theme = {
         enable = true;
-        name = "tokyonight";
+        name = "gruvbox";
         transparent = true;
-        style = "storm";
+        style = "dark";
       };
       vim.viAlias = false;
       vim.vimAlias = true;
@@ -125,7 +125,7 @@
         relativenumber = true;
       };
       vim.startPlugins = [
-        "tokyonight"             
+        "gruvbox"             
       ];
       vim.telescope = {
         enable = true;
