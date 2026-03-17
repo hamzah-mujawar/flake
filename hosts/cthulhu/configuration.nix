@@ -124,6 +124,10 @@
       vim.options = {
         nu = true;
         relativenumber = true;
+        expandtab = true;
+        smartindent = true;
+        tabstop = 4;
+        shiftwidth = 4;
       };
       vim.startPlugins = [
         "gruvbox"             
