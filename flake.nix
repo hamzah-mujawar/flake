@@ -55,13 +55,21 @@
   };
 
   outputs = { nixpkgs, home-manager, nvf, ... } @ inputs:
+    let
+        pkgs = import nixpkgs {
+            inherit system;
+            overlays = [ blocksds-nix.overlays.default ];
+        };
+        blocksds = pkgs.blocksdsNix.blocksdsSlim;
+        blocksdsEnv = blocksds.passthru;
+    in 
     {
       nixosConfigurations = {
         cthulhu = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = { inherit inputs; };
           modules = [
-	    nvf.nixosModules.default
+            nvf.nixosModules.default
             ./hosts/cthulhu/configuration.nix
             ./nixosModules
             home-manager.nixosModules.home-manager
@@ -76,14 +84,6 @@
         };
       };
       devShells.${system}.default =
-        let
-            pkgs = import nixpkgs {
-                inherit system;
-                overlays = [ blocksds-nix.overlays.default ];
-            };
-            blocksds = pkgs.blocksdsNix.blocksdsSlim;
-            blocksdsEnv = blocksds.passthru;
-        in {
             devShells.${system}.default = pkgs.mkShell {
               packages = with pkgs; [
                 blocksds
