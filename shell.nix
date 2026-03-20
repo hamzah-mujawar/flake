@@ -16,7 +16,7 @@
     blocksds = pkgs.blocksdsNix.blocksdsSlim;
     blocksdsEnv = blocksds.passthru;
   in {
-    devShells.${system}.default = pkgs.mkShell {
+    devShells.${pkgs.stdenv.system}.default = pkgs.mkShell {
       packages = with pkgs; [
         blocksds
         gnumake
