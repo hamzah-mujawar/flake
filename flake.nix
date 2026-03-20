@@ -75,7 +75,7 @@
           ];
         };
       };
-      devShell.${system}.default =
+      devShells.${system}.default =
         let
             pkgs = import nixpkgs {
                 inherit system;
@@ -97,4 +97,4 @@
               BLOCKSDSEXT         = blocksdsEnv.BLOCKSDSEXT;
             };
         };
-};
+}
