@@ -104,9 +104,9 @@
         interactiveShellInit = ''
             set fish_greeting # Disable greeting
         '';
-        plugins = {
+        plugins = [
             { name = "grc"; src = pkgs.fishPlugins.grc.src; }
-        };
+        ];
     };  
   
     home.sessionVariables = {
