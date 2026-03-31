@@ -89,6 +89,15 @@
 	update_check_interval = "0";
       };
     };
+
+    programs.zoxide = {
+        enable = true;
+        enableBashIntegration = true;
+        enableFishIntegration = true;
+        options = [
+            "--cmd cd" # this replaces the cd command with zoxide
+        ];
+    };
   
     home.sessionVariables = {
 
