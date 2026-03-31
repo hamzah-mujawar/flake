@@ -14,7 +14,6 @@
         fishPlugins.done
         fishPlugins.fzf-fish
         fishPlugins.grc
-        fishPlugins.z
      ];
   };
 }
