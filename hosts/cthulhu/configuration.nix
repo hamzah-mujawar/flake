@@ -198,9 +198,9 @@
 
   # Make emacs the default text EDITOR
   environment.variables = {
-    EDITOR = "emacs";
-    VISUAL = "emacs";
-    SUDO_EDITOR = "emacs";
+    EDITOR = "neovim";
+    VISUAL = "neovim";
+    SUDO_EDITOR = "neovim";
   };
   
   # This value determines the NixOS release from which the default
