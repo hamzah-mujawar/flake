@@ -176,6 +176,15 @@
     clock24 = true;
   };
 
+  programs.zoxide = {
+    enable = true;
+    enableBashIntegration = true;
+    enableFishIntegration = true;
+    options = [
+        "--cmd cd" # this replaces the cd command with zoxide
+    ];
+  };
+
   programs.nh = {
     enable = true;
     package = inputs.nh.packages.${pkgs.stdenv.hostPlatform.system}.nh;
