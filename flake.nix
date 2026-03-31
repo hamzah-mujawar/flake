@@ -47,6 +47,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    yazi.url = "github:sxyazi/yazi";
+
   };
 
   outputs = { nixpkgs, home-manager, nvf, ... } @ inputs:
