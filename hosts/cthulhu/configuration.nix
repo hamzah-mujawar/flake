@@ -105,6 +105,7 @@
     brightnessctl
     starship
     inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default
+    fzf
   ];
 
   programs.nvf = {

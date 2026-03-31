@@ -7,7 +7,6 @@
     ./services/greeter.nix
     ./services/screensharefix.nix
     ./programs/qemu.nix
-    ./programs/fish.nix
     ./programs/steam.nix
     ./programs/emacs.nix
     ./programs/helix.nix
@@ -26,8 +25,6 @@
   screensharefix.enable =
     lib.mkDefault true;
   qemu.enable =
-    lib.mkDefault true;
-  fish.enable =
     lib.mkDefault true;
   steam.enable =
     lib.mkDefault true;
