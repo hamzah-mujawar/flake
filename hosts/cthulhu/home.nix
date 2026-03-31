@@ -98,16 +98,6 @@
           "--cmd cd" # this replaces the cd command with zoxide
       ];
     };
-
-    programs.fish = {
-        enable = true;
-        interactiveShellInit = ''
-            set fish_greeting # Disable greeting
-        '';
-        plugins = [
-            { name = "grc"; src = pkgs.fishPlugins.grc.src; }
-        ];
-    };  
   
     home.sessionVariables = {
 
