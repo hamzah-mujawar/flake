@@ -104,7 +104,7 @@
     pavucontrol
     brightnessctl
     starship
-    yazi.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.nvf = {
