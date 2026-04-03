@@ -75,7 +75,7 @@
         bold_font = "auto";
         italic_font = "auto";
         bold_italic_font = "auto";
-        font_size = "16.0";
+        font_size = "12.0";
         cursor_shape = "beam";
         cursor_beam_thickness = "0.5";
         cursor_blink_interval = "0.5";
